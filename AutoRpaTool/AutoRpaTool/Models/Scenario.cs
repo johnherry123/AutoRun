@@ -1,9 +1,5 @@
-﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoRpaTool.Models
 {
@@ -11,9 +7,12 @@ namespace AutoRpaTool.Models
     {
         [Key]
         public int Id { get; set; }
-        public string Name { get; set; } = string.Empty; 
-        public string? Description { get; set; } 
+        public string Name { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
-        public List<ActionNode> Nodes { get; set; } = new List<ActionNode>();
+        // Tiêu đề cửa sổ cần đang active trước khi chạy (để kiểm tra điều kiện)
+        public string? TriggerWindowTitle { get; set; }
+
+        public List<ActionNode> Nodes { get; set; } = new();
     }
 }

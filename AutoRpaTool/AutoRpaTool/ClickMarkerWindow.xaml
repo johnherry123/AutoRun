@@ -1,0 +1,81 @@
+<Window x:Class="AutoRpaTool.ClickMarkerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="🎯 Đánh dấu điểm click/nhập" 
+        Width="700" Height="550"
+        WindowStartupLocation="CenterScreen"
+        Background="#1a1a2e"
+        ResizeMode="CanResize">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#16213e" Padding="12,8">
+            <TextBlock Text="Click vào vị trí bạn muốn thao tác (click/nhập). Nếu bỏ qua sẽ mặc định ở tâm ảnh."
+                       Foreground="#aaa" FontSize="12" TextWrapping="Wrap"/>
+        </Border>
+
+        <!-- Image + Marker -->
+        <Border Grid.Row="1" Background="#0d1b2a" Margin="10">
+            <Grid x:Name="ImageContainer" ClipToBounds="True">
+                <Image x:Name="PreviewImage" Stretch="Uniform"
+                       MouseLeftButtonDown="OnImageClick"/>
+                <!-- Crosshair marker -->
+                <Canvas x:Name="MarkerCanvas" IsHitTestVisible="False">
+                    <Ellipse x:Name="MarkerDot" Width="16" Height="16"
+                             Fill="#FF4444" Stroke="White" StrokeThickness="2"
+                             Visibility="Collapsed"/>
+                    <!-- Crosshair lines -->
+                    <Line x:Name="LineH" Stroke="#FF444488" StrokeThickness="1"
+                          StrokeDashArray="4 2" Visibility="Collapsed"/>
+                    <Line x:Name="LineV" Stroke="#FF444488" StrokeThickness="1"
+                          StrokeDashArray="4 2" Visibility="Collapsed"/>
+                </Canvas>
+            </Grid>
+        </Border>
+
+        <!-- Footer -->
+        <Border Grid.Row="2" Background="#16213e" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="StatusText" Grid.Column="0"
+                           Text="🎯 Chưa đánh dấu (sẽ dùng tâm ảnh)"
+                           Foreground="#fbbf24" FontSize="12" VerticalAlignment="Center"/>
+
+                <Button Grid.Column="1" Content="⏩ Bỏ qua (dùng tâm)" Width="150" Height="34"
+                        Margin="0,0,8,0" Background="#3b3b3b" Foreground="White"
+                        FontWeight="SemiBold" Click="OnSkip" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="6" Padding="8,0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Grid.Column="2" Content="✅ Xác nhận" Width="120" Height="34"
+                        Background="#065f46" Foreground="White"
+                        FontWeight="SemiBold" Click="OnConfirm" Cursor="Hand">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Background="{TemplateBinding Background}" CornerRadius="6" Padding="8,0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

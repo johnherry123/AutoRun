@@ -2,6 +2,7 @@
 using AutoRpaTool.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -15,21 +16,38 @@ namespace AutoRpaTool.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.36")
+                .HasAnnotation("ProductVersion", "8.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
+
+            MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
             modelBuilder.Entity("AutoRpaTool.Models.ActionNode", b =>
                 {
                     b.Property<string>("NodeId")
                         .HasColumnType("varchar(255)");
 
+                    b.Property<double>("ClickOffsetX")
+                        .HasColumnType("double");
+
+                    b.Property<double>("ClickOffsetY")
+                        .HasColumnType("double");
+
+                    b.Property<string>("DisplayName")
+                        .HasColumnType("longtext");
+
                     b.Property<string>("InputValue")
                         .HasColumnType("longtext");
+
+                    b.Property<bool>("IsStartNode")
+                        .HasColumnType("tinyint(1)");
 
                     b.Property<double>("LocationX")
                         .HasColumnType("double");
 
                     b.Property<double>("LocationY")
+                        .HasColumnType("double");
+
+                    b.Property<double>("MatchThreshold")
                         .HasColumnType("double");
 
                     b.Property<string>("NextNodeOnFail")
@@ -45,8 +63,11 @@ namespace AutoRpaTool.Migrations
                     b.Property<int>("ScenarioId")
                         .HasColumnType("int");
 
-                    b.Property<string>("TargetData")
+                    b.Property<string>("TargetImagePath")
                         .HasColumnType("longtext");
+
+                    b.Property<int>("WaitMs")
+                        .HasColumnType("int");
 
                     b.HasKey("NodeId");
 
@@ -55,17 +76,54 @@ namespace AutoRpaTool.Migrations
                     b.ToTable("ActionNodes");
                 });
 
+            modelBuilder.Entity("AutoRpaTool.Models.BranchRule", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Label")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NextNodeId")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NodeId")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<int>("Priority")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TargetImagePath")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NodeId");
+
+                    b.ToTable("BranchRules");
+                });
+
             modelBuilder.Entity("AutoRpaTool.Models.Scenario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<string>("Description")
                         .HasColumnType("longtext");
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("TriggerWindowTitle")
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
@@ -82,6 +140,22 @@ namespace AutoRpaTool.Migrations
                         .IsRequired();
 
                     b.Navigation("Scenario");
+                });
+
+            modelBuilder.Entity("AutoRpaTool.Models.BranchRule", b =>
+                {
+                    b.HasOne("AutoRpaTool.Models.ActionNode", "Node")
+                        .WithMany("BranchRules")
+                        .HasForeignKey("NodeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Node");
+                });
+
+            modelBuilder.Entity("AutoRpaTool.Models.ActionNode", b =>
+                {
+                    b.Navigation("BranchRules");
                 });
 
             modelBuilder.Entity("AutoRpaTool.Models.Scenario", b =>

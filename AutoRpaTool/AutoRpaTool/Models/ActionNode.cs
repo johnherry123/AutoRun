@@ -1,86 +1,96 @@
-﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema; // Cần để dùng [NotMapped]
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows; // Cần để dùng Point của WPF
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Windows;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace AutoRpaTool.Models
 {
-    // Đại diện cho một Bước hành động (Một thẻ Node trên màn hình)
-    // Kế thừa INotifyPropertyChanged để UI tự cập nhật khi dữ liệu thay đổi
-    public class ActionNode : INotifyPropertyChanged
+    /// <summary>
+    /// Các loại node trong flow kịch bản
+    /// </summary>
+    public enum NodeType
+    {
+        Click,      // Tìm ảnh → click chuột vào vị trí tìm được
+        Type,       // Tìm ảnh (focus) → gõ phím
+        Wait,       // Chờ một khoảng ms
+        Branch      // Switch-case: kiểm tra nhiều điều kiện ảnh → rẽ nhánh
+    }
+
+    public partial class ActionNode : ObservableObject
     {
         [Key]
-        public string NodeId { get; set; } = string.Empty; // ID duy nhất (Guid)
-        public int ScenarioId { get; set; } // Khóa ngoại link tới Scenario
+        public string NodeId { get; set; } = string.Empty;
+        public int ScenarioId { get; set; }
 
-        public string NodeType { get; set; } = string.Empty; // "Click", "Type"
+        public NodeType NodeType { get; set; } = NodeType.Click;
 
-        // Ô nhập text (ví dụ: mật khẩu, tên đăng nhập)
+        // Tên hiển thị do người dùng đặt
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(DisplayLabel))]
+        private string? _displayName;
+
+        // Nhãn hiển thị tự động: DisplayName nếu có, nếu không = "NodeType (ID ngắn)"
+        [NotMapped]
+        public string DisplayLabel =>
+            !string.IsNullOrWhiteSpace(DisplayName)
+                ? DisplayName
+                : $"{NodeType} ({(NodeId.Length > 6 ? NodeId[..6] : NodeId)})";
+
+        [ObservableProperty]
+        private bool _isStartNode;
+
+        // Ảnh mẫu để tìm kiếm trên màn hình (dùng cho Click, Type)
+        [ObservableProperty]
+        private string? _targetImagePath;
+
+        // Nội dung gõ phím (dành cho Type node)
+        [ObservableProperty]
         private string? _inputValue;
-        public string? InputValue
-        {
-            get => _inputValue;
-            set { _inputValue = value; OnPropertyChanged(); }
-        }
 
-        // Lưu ID mục tiêu trên màn hình (bắt bằng FlaUI)
-        private string? _targetData;
-        public string? TargetData
-        {
-            get => _targetData;
-            set { _targetData = value; OnPropertyChanged(); }
-        }
+        // Độ khớp tối thiểu của OpenCV (0.0 - 1.0), mặc định 0.85
+        public double MatchThreshold { get; set; } = 0.85;
 
-        // Tọa độ gốc (double) để lưu xuống Database MySQL
+        // Offset điểm click so với ảnh mẫu (0.0–1.0, 0.5=tâm)
+        public double ClickOffsetX { get; set; } = 0.5;
+        public double ClickOffsetY { get; set; } = 0.5;
+
+        // Thời gian chờ (ms) — dành cho Wait node
+        public int WaitMs { get; set; } = 1000;
+
+        // Routing cho node không phải Branch
+        public string? NextNodeOnSuccess { get; set; }
+        public string? NextNodeOnFail { get; set; }
+
+        // Tọa độ node trên canvas
         public double LocationX { get; set; }
         public double LocationY { get; set; }
 
-        // Tọa độ (Point) dành riêng cho Giao diện Nodify vẽ (Bỏ qua khi lưu DB)
         [NotMapped]
-        public Point Location
+        public System.Windows.Point Location
         {
-            get => new Point(LocationX, LocationY);
+            get => new(LocationX, LocationY);
             set
             {
                 LocationX = value.X;
                 LocationY = value.Y;
-                OnPropertyChanged();
+                OnPropertyChanged(nameof(Location));
             }
         }
 
-        // --- ĐOẠN MỚI THÊM CHO PHASE 2: Tọa độ đầu nối dây ---
+        // Anchors cho dây nối Nodify (không lưu DB)
+        [ObservableProperty]
+        [property: NotMapped]
+        private System.Windows.Point _inputAnchor;
 
-        // Điểm để nhận dây nối (mặc định bên trái node)
-        private Point _inputAnchor;
-        [NotMapped]
-        public Point InputAnchor
-        {
-            get => _inputAnchor;
-            set { _inputAnchor = value; OnPropertyChanged(); }
-        }
+        [ObservableProperty]
+        [property: NotMapped]
+        private System.Windows.Point _outputAnchor;
 
-        // Điểm để kéo dây đi (mặc định bên phải node)
-        private Point _outputAnchor;
-        [NotMapped]
-        public Point OutputAnchor
-        {
-            get => _outputAnchor;
-            set { _outputAnchor = value; OnPropertyChanged(); }
-        }
+        // Các case của Branch node
+        public ObservableCollection<BranchRule> BranchRules { get; set; } = new();
 
-        // --- ĐOẠN MỚI THÊM CHO PHASE 2: ID của Node tiếp theo ---
-        // Nối dây thì giá trị này sẽ được cập nhật
-        public string? NextNodeOnSuccess { get; set; }
-        public string? NextNodeOnFail { get; set; }
-
-        public Scenario? Scenario { get; set; } // Navigation property
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string name = null!)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        public Scenario? Scenario { get; set; }
     }
 }

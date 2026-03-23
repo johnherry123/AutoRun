@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "AutoRpaTool/1.0.0": {
         "dependencies": {
+          "CommunityToolkit.Mvvm": "8.4.1",
           "FlaUI.UIA3": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.36",
           "Nodify": "7.2.0",
@@ -15,6 +16,17 @@
         },
         "runtime": {
           "AutoRpaTool.dll": {}
+        }
+      },
+      "CommunityToolkit.Mvvm/8.4.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.1/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.4.0.0",
+            "fileVersion": "8.4.1.1"
+          }
         }
       },
       "FlaUI.Core/5.0.0": {
@@ -340,6 +352,14 @@
           }
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+        "runtime": {
+          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.100.225.20307"
+          }
+        }
+      },
       "System.Security.Cryptography.ProtectedData/8.0.0": {
         "runtime": {
           "lib/net6.0/System.Security.Cryptography.ProtectedData.dll": {
@@ -382,6 +402,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CommunityToolkit.Mvvm/8.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BTRteP8SvFyd/4KAreIFJBcxD2O9trLxLDD/p8YkSDDrfFOzy2U8cHyz6r+5Eh4kDhJdzAVglei6a+Bh4jCpUA==",
+      "path": "communitytoolkit.mvvm/8.4.1",
+      "hashPath": "communitytoolkit.mvvm.8.4.1.nupkg.sha512"
     },
     "FlaUI.Core/5.0.0": {
       "type": "package",
@@ -585,6 +612,13 @@
       "sha512": "sha512-jrK22i5LRzxZCfGb+tGmke2VH7oE0DvcDlJ1HAKYU8cPmD8XnpUT0bYn2Gy98GEhGjtfbR/sxKTVb+dE770pfA==",
       "path": "system.management/8.0.0",
       "hashPath": "system.management.8.0.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2hBr6zdbIBTDE3EhK7NSVNdX58uTK6iHW/P/Axmm9sl1xoGSLqDvMtpecn226TNwHByFokYwJmt/aQQNlO5CRw==",
+      "path": "system.runtime.compilerservices.unsafe/6.1.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.1.2.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/8.0.0": {
       "type": "package",

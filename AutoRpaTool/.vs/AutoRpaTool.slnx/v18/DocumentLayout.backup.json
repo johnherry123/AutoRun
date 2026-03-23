@@ -1,30 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\APPLICATION CODE\\AutoRpaTool\\",
+  "WorkspaceRootPath": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\services\\imagematchingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\services\\imagematchingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\models\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\models\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\services\\imagecaptureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\services\\imagecaptureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\models\\scenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\models\\scenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\models\\scenario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\regionselectorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\regionselectorwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\models\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\models\\actionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorpatool\\autorpatool\\migrations\\20260322031925_fullfixmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\migrations\\20260322031925_fullfixmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|d:\\application code\\autorun\\autorpatool\\autorpatool\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBE91445-5F69-A1E8-1B34-A58CFAB845A3}|AutoRpaTool\\AutoRpaTool.csproj|solutionrelative:autorpatool\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,75 +58,127 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ImageCaptureService.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Services\\ImageCaptureService.cs",
+              "RelativeDocumentMoniker": "AutoRpaTool\\Services\\ImageCaptureService.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Services\\ImageCaptureService.cs",
+              "RelativeToolTip": "AutoRpaTool\\Services\\ImageCaptureService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T07:20:10.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "AutoRpaTool\\MainWindow.xaml",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml",
+              "RelativeToolTip": "AutoRpaTool\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-23T03:24:58.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegionSelectorWindow.xaml.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\RegionSelectorWindow.xaml.cs",
+              "RelativeDocumentMoniker": "AutoRpaTool\\RegionSelectorWindow.xaml.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\RegionSelectorWindow.xaml.cs",
+              "RelativeToolTip": "AutoRpaTool\\RegionSelectorWindow.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T03:15:34.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\App.xaml.cs",
+              "RelativeDocumentMoniker": "AutoRpaTool\\App.xaml.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\App.xaml.cs",
+              "RelativeToolTip": "AutoRpaTool\\App.xaml.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T03:15:01.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "AutoRpaTool\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\ViewModels\\MainViewModel.cs*",
+              "RelativeToolTip": "AutoRpaTool\\ViewModels\\MainViewModel.cs*",
+              "ViewState": "AgIAAGYBAAAAAAAAAAAAAHkBAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T02:03:26.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ImageMatchingService.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Services\\ImageMatchingService.cs",
+              "RelativeDocumentMoniker": "AutoRpaTool\\Services\\ImageMatchingService.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Services\\ImageMatchingService.cs",
+              "RelativeToolTip": "AutoRpaTool\\Services\\ImageMatchingService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAiwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T07:27:36.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\AppDbContext.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "AutoRpaTool\\Models\\AppDbContext.cs",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\AppDbContext.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\AppDbContext.cs",
               "RelativeToolTip": "AutoRpaTool\\Models\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T01:49:32.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "ActionNode.cs",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\ActionNode.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\ActionNode.cs",
               "RelativeDocumentMoniker": "AutoRpaTool\\Models\\ActionNode.cs",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\ActionNode.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\ActionNode.cs",
               "RelativeToolTip": "AutoRpaTool\\Models\\ActionNode.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAiwFUAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAqwEcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T01:48:54.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Scenario.cs",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\Scenario.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\Scenario.cs",
               "RelativeDocumentMoniker": "AutoRpaTool\\Models\\Scenario.cs",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Models\\Scenario.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\Models\\Scenario.cs",
               "RelativeToolTip": "AutoRpaTool\\Models\\Scenario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T01:48:29.195Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "AutoRpaTool\\MainWindow.xaml",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml",
-              "RelativeToolTip": "AutoRpaTool\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-22T01:43:26.043Z",
+              "WhenOpened": "2026-03-22T01:48:29.195Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "AutoRpaTool\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\APPLICATION CODE\\AutoRun\\AutoRpaTool\\AutoRpaTool\\MainWindow.xaml.cs",
               "RelativeToolTip": "AutoRpaTool\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAA3wLsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T01:43:25.41Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "20260322031925_FullFixMigration.cs",
-              "DocumentMoniker": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Migrations\\20260322031925_FullFixMigration.cs",
-              "RelativeDocumentMoniker": "AutoRpaTool\\Migrations\\20260322031925_FullFixMigration.cs",
-              "ToolTip": "D:\\APPLICATION CODE\\AutoRpaTool\\AutoRpaTool\\Migrations\\20260322031925_FullFixMigration.cs",
-              "RelativeToolTip": "AutoRpaTool\\Migrations\\20260322031925_FullFixMigration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T03:19:25.572Z"
             }
           ]
         }
